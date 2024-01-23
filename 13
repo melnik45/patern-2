@@ -1,0 +1,14 @@
+# remove_file.py
+
+import os
+
+def remove_file(file_path):
+    if os.path.exists(file_path):
+        os.remove(file_path)
+        print(f"File '{file_path}' removed successfully.")
+    else:
+        print(f"File '{file_path}' not found.")
+
+if __name__ == "__main__":
+    file_to_remove = "patterns/singleton_pattern.py"
+    remove_file(file_to_remove)
